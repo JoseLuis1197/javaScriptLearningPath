@@ -1,46 +1,8 @@
-//Creando objeto data
+var Calculadora = require ("./calculadora");
 
-var data = {
-    color: "Rojo",
-    tamaño: "Grande",
-    marca : "Toyota",    
-    nuevo : false
-}
+var resultado = Calculadora.suma(1,2);
+var resultado2 = Calculadora.resta(3,1);
 
-//Creando un constructor
 
-var auto = function(data){
-    this.color = data.color,
-    this.tamaño = data.tamaño,
-    this.marca = data.marca,   
-    this.nuevo = data.nuevo    
-}
-
-//Funcion de acelerar para constructor
-auto.prototype.acelerar = function(){
-    console.log("Acelerar auto " + this.marca);    
-}
-
-//Función desacelerar para constructor
-auto.prototype.desacelerar = function(){
-    console.log("Desacelerar auto" + this.marca);
-}
-
-auto.prototype.propiedades = function(){
-    console.log("Color: " + this.color + "Tamaño: " + this.tamaño + "Marca: " + this.marca + "Nuevo: " + this.nuevo);    
-}
-
-auto.prototype.llamar = function(){
-    return "Este auto es de marca " + this.marca;
-}
-    
-    
-var miAuto = new auto(data);
-
-//console.log(miAuto);
-miAuto.acelerar();
-miAuto.desacelerar();
-miAuto.propiedades();
-
-console.log(miAuto.llamar());
-
+console.log(resultado);
+console.log(resultado2);
